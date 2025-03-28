@@ -104,7 +104,10 @@ vocabulary <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation 
 	concept ImmaterialEntity < IndependentContinuant
 	
 	@rdfs:label "Site"
-	concept Site < ImmaterialEntity
+	concept Site < ImmaterialEntity, Container, ContainedElement [
+		restricts all contains to Site
+		restricts all isContainedIn to Site
+	]
 	
 	@rdfs:label "Energy"
 	concept Energy < ImmaterialEntity
@@ -212,6 +215,7 @@ vocabulary <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation 
 	
 	///// Rules
 
+	///// Extra comment to test v1.0.1
 	
 	
 	}
